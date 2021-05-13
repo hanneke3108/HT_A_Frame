@@ -3,10 +3,8 @@ var rotationSpeed = -0.01;
 var myOtherBox = document.getElementById('myOtherBox');
 
 function spin(){
-	var rotationAxisX = myOtherBox.object3D.rotation.x += rotationSpeed;
-	var rotationAxisY = myOtherBox.object3D.rotation.y += rotationSpeed;
-	var rotationAxisZ = myOtherBox.object3D.rotation.z += rotationSpeed;
-	console.log(rotationAxisX, rotationAxisY, rotationAxisZ);
+	var rotationAxis = myOtherBox.object3D.rotation.x + myOtherBox.object3D.rotation.y + myOtherBox.object3D.rotation.z += rotationSpeed;
+	console.log(rotationAxis);
 }
 
 setInterval(spin, 16); //equivalent to 60 fps
